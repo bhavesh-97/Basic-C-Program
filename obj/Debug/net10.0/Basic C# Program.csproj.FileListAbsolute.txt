@@ -1,0 +1,14 @@
+D:\AngularDotNet\Basic C# Program\Basic C# Program\bin\Debug\net10.0\Basic C# Program.exe
+D:\AngularDotNet\Basic C# Program\Basic C# Program\bin\Debug\net10.0\Basic C# Program.deps.json
+D:\AngularDotNet\Basic C# Program\Basic C# Program\bin\Debug\net10.0\Basic C# Program.runtimeconfig.json
+D:\AngularDotNet\Basic C# Program\Basic C# Program\bin\Debug\net10.0\Basic C# Program.dll
+D:\AngularDotNet\Basic C# Program\Basic C# Program\bin\Debug\net10.0\Basic C# Program.pdb
+D:\AngularDotNet\Basic C# Program\Basic C# Program\obj\Debug\net10.0\Basic C# Program.GeneratedMSBuildEditorConfig.editorconfig
+D:\AngularDotNet\Basic C# Program\Basic C# Program\obj\Debug\net10.0\Basic C# Program.AssemblyInfoInputs.cache
+D:\AngularDotNet\Basic C# Program\Basic C# Program\obj\Debug\net10.0\Basic C# Program.AssemblyInfo.cs
+D:\AngularDotNet\Basic C# Program\Basic C# Program\obj\Debug\net10.0\Basic C# Program.csproj.CoreCompileInputs.cache
+D:\AngularDotNet\Basic C# Program\Basic C# Program\obj\Debug\net10.0\Basic C# Program.dll
+D:\AngularDotNet\Basic C# Program\Basic C# Program\obj\Debug\net10.0\refint\Basic C# Program.dll
+D:\AngularDotNet\Basic C# Program\Basic C# Program\obj\Debug\net10.0\Basic C# Program.pdb
+D:\AngularDotNet\Basic C# Program\Basic C# Program\obj\Debug\net10.0\Basic C# Program.genruntimeconfig.cache
+D:\AngularDotNet\Basic C# Program\Basic C# Program\obj\Debug\net10.0\ref\Basic C# Program.dll
