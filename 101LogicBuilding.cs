@@ -53,8 +53,20 @@ namespace Basic_C__Program
             //13. Calculate the Sum of Digits of a Given Number
             //this.SumofDigits();
 
-            // 14 Write a Program to Check Whether a Character is a Vowel or Consonant
-            this.CheckVowel();
+            //14 Write a Program to Check Whether a Character is a Vowel or Consonant
+            //this.CheckVowel();
+
+            //15. Write a Program to Find the ASCII Value of a Character
+            //this.CharToANSCI();
+
+            //16. Pattern 1: Sqaure
+            //this.Pattern_Sqaure();
+
+            //17. Pattern 2: Right-angled trinagle
+            //this.Pattern_Right_angled_trinagle();
+
+            //18. Pattern 3: Hallow Rectangle
+            this.Pattern_Hallow_Rectangle();
         }
         public void Swapnumber()
         {
@@ -238,6 +250,63 @@ namespace Basic_C__Program
                 Console.WriteLine("Vowel");
             else
                 Console.WriteLine("Not a vowel");
+        }
+        public void CharToANSCI()
+        {
+            //15. Write a Program to Find the ASCII Value of a Character
+            Console.Write("Enter a character: ");
+            char inputChar = Console.ReadKey().KeyChar;
+            Console.WriteLine();
+
+            // LOGIC: Subtracting the 'null' character ('\0') which has a value of 0.
+            // This forces an implicit conversion to a numeric result.
+            var asciiValue = inputChar - '\0';
+
+            Console.WriteLine($"The ASCII value of '{inputChar}' is: {asciiValue}");
+        }
+        public void Pattern_Sqaure()
+        {
+            //16. Pattern 1: Sqaure
+            int n = 5;
+            for (int i = 0; i < n; i++)
+            {
+                for(int j = 0; j < n; j++)
+                    Console.Write('*');
+                Console.WriteLine();
+            }
+        }
+        public void Pattern_Right_angled_trinagle()
+        {
+            //17. Pattern 2: Right-angled trinagle
+            int n = 5;
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < i; j++)
+                    Console.Write('*');
+                Console.WriteLine();
+            }
+        }
+        public void Pattern_Hallow_Rectangle()
+        {
+            //18. Pattern 3: Hallow Rectangle
+            int rows = 25;
+            int cols = 50;
+
+            for (int i = 1; i <= rows; i++)
+            {
+                for (int j = 1; j <= cols; j++)
+                {
+                    if (i == 1 || i == rows || j == 1 || j == cols)
+                    {
+                        Console.Write("*");
+                    }
+                    else
+                    {
+                        Console.Write(' ');
+                    }
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
