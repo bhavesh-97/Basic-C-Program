@@ -12,3 +12,4 @@ D:\AngularDotNet\Basic C# Program\Basic C# Program\obj\Debug\net10.0\refint\Basi
 D:\AngularDotNet\Basic C# Program\Basic C# Program\obj\Debug\net10.0\Basic C# Program.pdb
 D:\AngularDotNet\Basic C# Program\Basic C# Program\obj\Debug\net10.0\Basic C# Program.genruntimeconfig.cache
 D:\AngularDotNet\Basic C# Program\Basic C# Program\obj\Debug\net10.0\ref\Basic C# Program.dll
+D:\AngularDotNet\Basic C# Program\Basic C# Program\obj\Debug\net10.0\Basic C# Program.sourcelink.json
