@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Basic_C__Program
 {
@@ -15,10 +17,10 @@ namespace Basic_C__Program
 
             //2. Write a Program to Find the Size of int, float, double, and char
             //this.FindsizeofDatatype();
-            
+
             //3. Program to Find the Larger Number Among Two Numbers
             //this.FindLargestNumberfromTwoNumbers();
-            
+
             //4. Program to Check Whether the Number is Odd or Even
             //this.FindOddNumber();
 
@@ -31,10 +33,28 @@ namespace Basic_C__Program
             //this.CheckMultipleof7();
 
             //7. Program to Calculate the Square and Cube of a Number:
-            this.FindSquereandCube();
+            //this.FindSquereandCube();
 
             //8.Program to Calculate the Area of a Circle and Triangle
-            this.CalculateAreaofcircleandTriangle();
+            //this.CalculateAreaofcircleandTriangle();
+
+            //9. Write a Program to Find the Quotient and Remainder of Two Integers:
+            //this.FindQuotientandRemainder();
+
+            //10. Print the Multiplication Table of a Given Number
+            //this.GenerateMultiplicationTable();
+
+            //11.Write a Program to Make a Simple Calculator Using a Switch Case
+            //this.Calculator();
+
+            //12. Print a Number in Reverse Order
+            //this.ReverseInt();
+
+            //13. Calculate the Sum of Digits of a Given Number
+            //this.SumofDigits();
+
+            // 14 Write a Program to Check Whether a Character is a Vowel or Consonant
+            this.CheckVowel();
         }
         public void Swapnumber()
         {
@@ -125,6 +145,99 @@ namespace Basic_C__Program
             double triangle = (basse * height) / 2;
             Console.WriteLine("Area of Circle: " + circle);
             Console.WriteLine("Area of Triangle: " + triangle);
+        }
+
+        public void FindQuotientandRemainder()
+        {
+            // 9. Write a Program to Find the Quotient and Remainder of Two Integers:
+            Console.Write("Enter a Dividend: ");
+            int Dividend = int.Parse(Console.ReadLine());
+            Console.Write("Enter a Divisor: ");
+            int Divisor = int.Parse(Console.ReadLine());
+            int quotient = Dividend / Divisor;  
+            int remainder = Dividend % Divisor;
+            Console.WriteLine("Quotient: " + quotient);
+            Console.WriteLine("Remainder: " + remainder);
+        }
+        public void GenerateMultiplicationTable()
+        {
+            //10. Print the Multiplication Table of a Given Number
+            Console.Write("Enter a number: ");
+            int number = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine($"{number} * {i} = {number * i}");
+            }
+        }
+        public void Calculator()
+        {
+            //11.Write a Program to Make a Simple Calculator Using a Switch Case
+            Console.Write("Enter a first  number: ");
+            int firstnumber = int.Parse(Console.ReadLine()); 
+            Console.Write("Enter a Operator: ");
+            string operatoor = Console.ReadLine();
+            Console.Write("Enter a Second number: ");
+            int secondnumber = int.Parse(Console.ReadLine());
+
+            switch (operatoor)
+            {
+                case "+":
+                    Console.WriteLine($"{firstnumber} + {secondnumber} = {firstnumber + secondnumber}");
+                    break;
+                case "-":
+                    Console.WriteLine($"{firstnumber} - {secondnumber} = {firstnumber - secondnumber}");
+                    break;
+                case "*":
+                    Console.WriteLine($"{firstnumber} * {secondnumber} = {firstnumber * secondnumber}");
+                    break;
+                case "/":
+                    Console.WriteLine($"{firstnumber} / {secondnumber} = {firstnumber / secondnumber}");
+                    break;
+                default:
+                    Console.WriteLine("Please Enter Valid Operator (+,-,*,/)");
+                    break;
+            }
+          }
+
+        public void ReverseInt()
+        {
+            Console.Write("Enter a number: ");
+            int number = int.Parse(Console.ReadLine());
+            int reverse = 0;
+            int sign = number > 0 ? 1 : -1;
+            while (number > 0)
+            {
+                int d = number % 10;
+                reverse = reverse * 10 + d;
+                number /= 10;
+            }
+            Console.WriteLine("Reverse Number is " + reverse*sign);
+        }
+        public void SumofDigits()
+        {
+            //13. Calculate the Sum of Digits of a Given Number
+            Console.Write("Enter a number at least 2 digits: ");
+            int number = int.Parse(Console.ReadLine());
+            int sumofDigits = 0;
+            while(number > 0)  {
+                int d = number % 10;
+                sumofDigits += d;
+                number /= 10;
+            }
+            Console.WriteLine("Sum of Digits: "+ sumofDigits);
+        }
+        public void CheckVowel() 
+        {
+            // 14 Write a Program to Check Whether a Character is a Vowel or Consonant
+            Console.Write("Enter a single character: ");
+            string value = Console.ReadLine();
+            char chr = value[0];
+            Console.WriteLine($"You entered: {chr}");
+            var vowelvalue = new HashSet<char> { 'a', 'e', 'i', 'o', 'u' };
+            if (vowelvalue.Contains(chr))
+                Console.WriteLine("Vowel");
+            else
+                Console.WriteLine("Not a vowel");
         }
     }
 }
