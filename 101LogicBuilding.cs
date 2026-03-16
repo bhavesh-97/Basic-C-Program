@@ -12,6 +12,7 @@ namespace Basic_C__Program
     {
        public _101LogicBuilding()
         {
+            #region Maths 
             //1. Program to Print Integer Numbers Entered by the User
             //this.ReadNumber();
 
@@ -59,6 +60,9 @@ namespace Basic_C__Program
             //15. Write a Program to Find the ASCII Value of a Character
             //this.CharToANSCI();
 
+            #endregion Maths
+
+            #region Star Patterns
             //16. Pattern 1: Sqaure
             //this.Pattern_Sqaure();
 
@@ -66,8 +70,16 @@ namespace Basic_C__Program
             //this.Pattern_Right_angled_trinagle();
 
             //18. Pattern 3: Hallow Rectangle
-            this.Pattern_Hallow_Rectangle();
+            //this.Pattern_Hallow_Rectangle();
+
+            //19. Pattern 4: Inverted Right-angled triangle
+            //this.Pattern_Inverted_Right_angled_trinagle();
+
+            //20. Pattern 5: traingle
+            this.Pattern_trinagle();
+            #endregion Star Patterns
         }
+        #region Maths 
         public void Swapnumber()
         {
             int a = 5; int b = 6;
@@ -264,6 +276,10 @@ namespace Basic_C__Program
 
             Console.WriteLine($"The ASCII value of '{inputChar}' is: {asciiValue}");
         }
+
+        #endregion Maths
+
+        #region Star Patterns
         public void Pattern_Sqaure()
         {
             //16. Pattern 1: Sqaure
@@ -304,5 +320,35 @@ namespace Basic_C__Program
                 Console.WriteLine();
             }
         }
+
+        public void Pattern_Inverted_Right_angled_trinagle()
+        {
+            //19. Pattern 4: Inverted Right-angled triangle
+            int n = 5;
+            for (int i = 0; i <= n; i++)
+            {
+                for (int j = n; j > i; j--)
+                    Console.Write("* ");
+                Console.WriteLine();
+            }
+        }
+
+        public void Pattern_trinagle()
+        {
+            //20. Pattern 5: traingle
+            int n = 9;
+            for (int i = 1; i <= n; i++)
+            {
+                for (int j = 1; j <= n - i; j++)
+                    Console.Write(" ");
+
+                for (int j = 1; j <= 2 * i - 1; j++)
+                    Console.Write("*");
+
+                Console.WriteLine();
+            }
+        }
+
+        #endregion Star Patterns
     }
 }
