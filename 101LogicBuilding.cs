@@ -289,21 +289,17 @@ namespace Basic_C__Program
         public void Pattern_Hallow_Rectangle()
         {
             //18. Pattern 3: Hallow Rectangle
-            int rows = 25;
-            int cols = 50;
+            int rows = 10;
+            int cols = 20;
 
             for (int i = 1; i <= rows; i++)
             {
-                for (int j = 1; j <= cols; j++)
+                for(int j = 1;  j <= cols; j++)
                 {
-                    if (i == 1 || i == rows || j == 1 || j == cols)
-                    {
-                        Console.Write("*");
-                    }
+                    if(i == 1 || i == rows ||  j == 1  ||  j == cols)
+                        Console.Write('*');
                     else
-                    {
                         Console.Write(' ');
-                    }
                 }
                 Console.WriteLine();
             }
