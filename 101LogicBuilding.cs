@@ -67,7 +67,7 @@ namespace Basic_C__Program
             //this.Pattern_Sqaure();
 
             //17. Pattern 2: Right-angled trinagle
-            //this.Pattern_Right_angled_trinagle();
+            this.Pattern_Right_angled_trinagle();
 
             //18. Pattern 3: Hallow Rectangle
             //this.Pattern_Hallow_Rectangle();
@@ -76,7 +76,10 @@ namespace Basic_C__Program
             //this.Pattern_Inverted_Right_angled_trinagle();
 
             //20. Pattern 5: traingle
-            this.Pattern_trinagle();
+            //this.Pattern_trinagle();
+
+            //21. Pattern 6:  Inverted traingle
+            //this.Pattern_Inverted_trinagle();
             #endregion Star Patterns
         }
         #region Maths 
@@ -338,6 +341,22 @@ namespace Basic_C__Program
             //20. Pattern 5: traingle
             int n = 9;
             for (int i = 1; i <= n; i++)
+            {
+                for (int j = 1; j <= n - i; j++)
+                    Console.Write(" ");
+
+                for (int j = 1; j <= 2 * i - 1; j++)
+                    Console.Write("*");
+
+                Console.WriteLine();
+            }
+        }
+
+        public void Pattern_Inverted_trinagle()
+        {
+            //21. Pattern 6:  Inverted traingle
+            int n = 9;
+            for (int i = n; i >= 1; i--)
             {
                 for (int j = 1; j <= n - i; j++)
                     Console.Write(" ");
