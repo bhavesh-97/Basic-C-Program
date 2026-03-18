@@ -457,6 +457,31 @@ namespace Basic_C__Program
             else
                 Console.WriteLine($"{num} is not Prime Number");
         }
+        public void PrimeNumberSeries()
+        {
+            //30. Print Prime Numbers Within a Range
+            Console.Write("Enter a number: ");
+            int num = int.Parse(Console.ReadLine());
+            bool isPrime = true;
+            if (num <= 1) isPrime = false;
+            else if (num == 2) isPrime = true;
+            else if (num % 2 == 0) isPrime = false;
+            else
+            {
+                for (int i = 3; i * i <= num; i += 2)
+                {
+                    if (num % i == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                }
+            }
+            if (isPrime)
+                Console.WriteLine($"{num} is Prime Number");
+            else
+                Console.WriteLine($"{num} is not Prime Number");
+        }
 
         #endregion Maths
 
