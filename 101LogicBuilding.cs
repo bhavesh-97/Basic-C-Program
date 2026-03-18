@@ -60,6 +60,30 @@ namespace Basic_C__Program
             //15. Write a Program to Find the ASCII Value of a Character
             //this.CharToANSCI();
 
+            //22. Write a Program to Find the Largest Number Among Three Numbers
+            //this.Largestnumber();
+
+            //23. Write a Program to Check Whether a Year Entered by the User is a Leap Year:
+            //this.LeapYear();
+
+            // 24 Write a Program to Calculate the Sum of the First N Natural Numbers
+            //this.SumofNNaturalnumber();
+
+            //25. Factorial of a Number Using a For Loop
+            //this.FactorialNumber();
+
+            //26. Print Fibonacci Series
+            //this.Fibonacciseries();
+
+            //27. Write a Program to Find the GCD or HCF of Two Numbers
+            //this.Find_GCD_HCF();
+
+            //28. Amstrong Number or Not
+            //this.AmstrongNumber();
+
+            //29. Check Whether a Number is Prime or Not:
+            this.PrimeNumber();
+
             #endregion Maths
 
             #region Star Patterns
@@ -67,7 +91,7 @@ namespace Basic_C__Program
             //this.Pattern_Sqaure();
 
             //17. Pattern 2: Right-angled trinagle
-            this.Pattern_Right_angled_trinagle();
+            //this.Pattern_Right_angled_trinagle();
 
             //18. Pattern 3: Hallow Rectangle
             //this.Pattern_Hallow_Rectangle();
@@ -278,6 +302,160 @@ namespace Basic_C__Program
             var asciiValue = inputChar - '\0';
 
             Console.WriteLine($"The ASCII value of '{inputChar}' is: {asciiValue}");
+        }
+
+        public void Largestnumber()
+        {
+            //22. Write a Program to Find the Largest Number Among Three Numbers
+            Console.Write("Enter a first  number: ");
+            int firstnumber = int.Parse(Console.ReadLine());
+            Console.Write("Enter a Second number: ");
+            int secondnumber = int.Parse(Console.ReadLine());
+            Console.Write("Enter a Third number: ");
+            int Thirdnumber = int.Parse(Console.ReadLine());
+            
+            if (firstnumber > secondnumber && firstnumber > Thirdnumber)
+                Console.WriteLine($"{firstnumber} is largest number");
+            else if (firstnumber < secondnumber && secondnumber > Thirdnumber)
+                Console.WriteLine($"{secondnumber} is largest number");
+            else
+                Console.WriteLine($"{Thirdnumber} is largest number");
+        }
+        public void LeapYear()
+        {
+            //23. Write a Program to Check Whether a Year Entered by the User is a Leap Year:
+            Console.Write("Enter a Year: ");
+            int Year = int.Parse(Console.ReadLine());
+
+            if ((Year % 4 == 0 && Year % 100 != 0) || (Year % 400 == 0))
+                Console.WriteLine($"{Year} is Leap year");
+            else
+                Console.WriteLine($"{Year} is not Leap year");
+        }
+     
+        public void SumofNNaturalnumber()
+        {
+            //24. Write a Program to Calculate the Sum of the First N Natural Numbers
+            Console.Write("Enter a Number: ");
+            int num = int.Parse(Console.ReadLine());
+            int sum = 0;
+
+            for (int i = 0; i <= num; i++)
+            {
+                sum += i;
+            }
+
+            Console.WriteLine($"The sum of the first {num} natural numbers is {sum}");
+        }
+
+        public void FactorialNumber()
+        {
+            //25. Factorial of a Number Using a For Loop
+            Console.Write("Enter a Number: ");
+            int num = int.Parse(Console.ReadLine());
+            int fact = 1;
+
+            for (int i = 1; i <= num; i++)
+            {
+                fact *= i;
+            }
+
+            Console.WriteLine($"Factorial oft {num} is {fact}");
+        }
+
+        public void Fibonacciseries()
+        {
+            //26. Print Fibonacci Series
+            Console.Write("Enter a Number: ");
+            int num = int.Parse(Console.ReadLine());
+            int first = 0;
+            int second = 1;
+
+            Console.Write("Fibonacci series are ");
+            for (int i = 1; i <= num; i++)
+            {
+                Console.Write(first + " ");
+                int next = first + second;
+                first = second;
+                second = next;
+
+            }
+        }
+        public void Find_GCD_HCF()
+        {
+            //27. Write a Program to Find the GCD or HCF of Two Numbers
+            Console.Write("Enter a first  number: ");
+            int firstnumber = int.Parse(Console.ReadLine());
+            Console.Write("Enter a Second number: ");
+            int secondnumber = int.Parse(Console.ReadLine());
+
+            while(secondnumber != 0)
+            {
+                int temp = secondnumber;
+                secondnumber = firstnumber % secondnumber;
+                firstnumber = temp;
+            }
+
+            Console.WriteLine($"The GCD is {firstnumber}.");
+
+        }
+
+        public void AmstrongNumber()
+        {
+            //28. Amstrong Number or Not
+            Console.Write("Enter a Number: ");
+            string s = Console.ReadLine();
+            int num = int.Parse(s);
+            int n = s.Length;
+            int sum = 0;
+            int temp = num;
+
+            while (temp > 0)
+            {
+                int digit = temp % 10;
+
+                // withot pow method
+                int power = 1;
+                for(int i = 0; i < n; i++)
+                {
+                    power *= digit;
+                }
+                sum += power;
+
+                //with pow method
+                //sum += Math.Pow(digit, power);
+                temp /= 10;
+            }
+            if (sum == num)
+                Console.WriteLine("Armstrong Number");
+            else
+                Console.WriteLine("Not Armstrong");
+        }
+
+        public void PrimeNumber()
+        {
+            //29. Check Whether a Number is Prime or Not:
+            Console.Write("Enter a number: ");
+            int num = int.Parse(Console.ReadLine());
+            bool isPrime = true;
+            if (num <= 1) isPrime = false;
+            else if (num == 2) isPrime = true;
+            else if (num % 2 == 0) isPrime = false;
+            else
+            {
+                for (int i = 3; i * i <= num; i += 2)
+                {
+                    if (num % i == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                }
+            }
+            if (isPrime)
+                Console.WriteLine($"{num} is Prime Number");
+            else
+                Console.WriteLine($"{num} is not Prime Number");
         }
 
         #endregion Maths
